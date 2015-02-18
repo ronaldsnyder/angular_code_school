@@ -1,0 +1,3 @@
+Currency                 <em class="pull-right">{{product.price | currency}}</em>\
+Date                     {{'1388123412323' | date: 'MM/dd/yyyy @ h:mma'}} 12/27/2013 @ 12.50AM
+upper/lower             {{'octogan gem' | uppercase}}
