@@ -5,12 +5,14 @@
     </head>
     <body ng-controller="StoreController as store">
         <!--ng-controller is the directive, StoreController is the controller name, store is the alias-->
-        <div ng-repeat="product in store.products">
-            <h1> {{product.name}} </h1>
-            <h2> {{product.price}} </h2>
-            <p> {{product.description}} </p>
-            <button ng-show="product.canPurchase">Add to Cart</button>
-        </div>
+        <ul class="list-group">
+            <li class="list-group" ng-repeat="product in store.products">
+                <h3>
+                    {{product.name}}
+                    <em class="pull-right">${{product.price}}</em>
+                </h3>
+            </li>
+        </ul>
         <script type="text/javascript" src="lib/angular.min.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
     </body>
